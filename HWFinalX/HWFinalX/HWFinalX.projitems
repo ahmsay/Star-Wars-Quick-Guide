@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>{771C170A-0F42-45E4-8221-2EC744488643}</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>HWFinalX</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)App.xaml" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)MainPage.xaml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)CustomControls\CustomButton.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomControls\CustomImage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CustomControls\CustomSearchBar.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppData\Data.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppData\FavData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Quote.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)EntityList.xaml.cs">
+      <DependentUpon>EntityList.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Helpers\IImageSaver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Home.xaml.cs">
+      <DependentUpon>Home.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
+      <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)EntityDetail.xaml.cs">
+      <DependentUpon>EntityDetail.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Movie.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Character.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Planet.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\SharpEntity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Specie.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Starship.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Entities\Vehicle.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)EntityDetail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)AppData\EmbeddedData.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)EntityList.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Home.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

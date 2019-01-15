@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HWFinalX.CustomControls"
+             x:Class="HWFinalX.MainPage" MasterBehavior="Popover">
+
+    <MasterDetailPage.Master>
+        <ContentPage Title="Star Wars Quick Guide" BackgroundColor="{StaticResource swblack}">
+            <ContentPage.Content>
+                <StackLayout Style="{StaticResource stackLayoutStyle}">
+                    <local:CustomImage AspectRatio="0.5625" Source="https://wallpapercave.com/wp/mSjF3lW.png"/>
+                    <Label x:Name="celeb" Text="Happy Star Wars day! May the 4th be with you." IsVisible="False" Style="{StaticResource listTitleStyle}" FontAttributes="Bold"/>
+                    <ListView x:Name="menuList" ItemTapped="Switch">
+                        <ListView.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Home</x:String>
+                                <x:String>Movies</x:String>
+                                <x:String>Characters</x:String>
+                                <x:String>Planets</x:String>
+                                <x:String>Species</x:String>
+                                <x:String>Starships</x:String>
+                                <x:String>Vehicles</x:String>
+                                <x:String>My Favorites</x:String>
+                            </x:Array>
+                        </ListView.ItemsSource>
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Label Text="{Binding}" Style="{StaticResource listTitleStyle}"/>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage>
+            <ContentPage.Content>
+                <StackLayout>
+                    
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

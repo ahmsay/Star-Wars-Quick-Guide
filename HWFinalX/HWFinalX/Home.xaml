@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HWFinalX.CustomControls"
+             x:Class="HWFinalX.Home" BackgroundColor="{StaticResource swdarkgray}" Title="Home">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Style="{StaticResource stackLayoutStyle}">
+                <local:CustomImage AspectRatio="0.5625" Source="http://www.linuxcmd.org/lcshow/big/69/691161_star-wars-logo-wallpaper.jpg"/>
+                <Label Text="Quote of The Day" Style="{StaticResource homeLabelStyle}"/>
+                <Label x:Name="quote" TextColor="{StaticResource swlightgray}"/>
+                <Label x:Name="owner" HorizontalOptions="End" VerticalOptions="End" TextColor="{StaticResource swlightgray}" FontAttributes="Italic"/>
+                <Label Text="Hello There!" Style="{StaticResource homeLabelStyle}"/>
+                <Label x:Name="about" TextColor="{StaticResource swlightgray}"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

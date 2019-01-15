@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HWFinalX.CustomControls"
+             x:Class="HWFinalX.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Color x:Key="swyellow">#fee21a</Color>
+            <Color x:Key="swblack">#1b1d21</Color>
+            <Color x:Key="swdarkgray">#262a2f</Color>
+            <Color x:Key="swlightgray">#c7c7c7</Color>
+
+            <Style x:Key="stackLayoutStyle" TargetType="StackLayout">
+                <Setter Property="Padding" Value="10"/>
+            </Style>
+
+            <Style x:Key="listTitleStyle" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="TextColor" Value="{StaticResource swyellow}"/>
+            </Style>
+
+            <Style x:Key="listLabelStyle" TargetType="Label">
+                <Setter Property="VerticalOptions" Value="CenterAndExpand"/>
+                <Setter Property="TextColor" Value="{StaticResource swlightgray}"/>
+            </Style>
+
+            <Style x:Key="homeLabelStyle" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource swlightgray}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+            </Style>
+
+            <Style ApplyToDerivedTypes="True" TargetType="ListView">
+                <Setter Property="SeparatorColor" Value="{StaticResource swblack}"/>
+            </Style>
+
+            <Style ApplyToDerivedTypes="True" TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="{StaticResource swblack}"/>
+                <Setter Property="BarTextColor" Value="{StaticResource swyellow}"/>
+            </Style>
+
+            <Style ApplyToDerivedTypes="True" TargetType="SearchBar">
+                <Setter Property="BackgroundColor" Value="{StaticResource swblack}"/>
+                <Setter Property="TextColor" Value="{StaticResource swlightgray}"/>
+                <Setter Property="PlaceholderColor" Value="#878787"/>
+                <Setter Property="CancelButtonColor" Value="{StaticResource swyellow}"/>
+            </Style>
+
+            <Style x:Key="buttonStyle" TargetType="local:CustomButton">
+                <Setter Property="TextColor" Value="{StaticResource swyellow}"/>
+                <Setter Property="BackgroundColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color" WinPhone="{StaticResource swblack}" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="TintColor">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="Color" Android="{StaticResource swblack}" />
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </ResourceDictionary>
+	</Application.Resources>
+</Application>

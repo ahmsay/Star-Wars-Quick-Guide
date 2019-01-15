@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:HWFinalX.CustomControls"
+             x:Class="HWFinalX.EntityDetail" Title="Details" BackgroundColor="{StaticResource swdarkgray}">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout x:Name="stack" Style="{StaticResource stackLayoutStyle}">
+                <local:CustomImage x:Name="img" AspectRatio="0.5625" Source="-">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Save" NumberOfTapsRequired="2"/>
+                    </Image.GestureRecognizers>
+                </local:CustomImage>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

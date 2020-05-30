@@ -1,6 +1,7 @@
 # Star-Wars-Quick-Guide
 A Star Wars mobile application that contains information from the Legends universe.
 
+## Screenshots
 <p>
   <img src="https://user-images.githubusercontent.com/22731894/79499078-10194380-8033-11ea-90ce-4848fb01efab.jpg" width="290">
   <img src="https://user-images.githubusercontent.com/22731894/79499092-160f2480-8033-11ea-9a0c-65aa4df46e3a.jpg" width="290">
